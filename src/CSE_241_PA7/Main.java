@@ -13,6 +13,13 @@ public class Main {
         ds.register(p2);
         ds.register(v1);
         ds.register(v2);
+
+        ds.add(new Video("videoname1", "duration1", "other info1"));
+        ds.add(new Video("videoname2", "duration2", "other info2"));
+        ds.add(new Video("videoname3", "duration3", "other info3"));
+        ds.add(new Text("textname1", "other info1"));
+        ds.add(new Text("textname2", "other info2"));
+        ds.add(new Text("textname3", "other info3"));
         ds.add(new Image("imagename1", "dimension info1", "other info1"));
         ds.add(new Image("imagename2", "dimension info2", "other info2"));
         ds.add(new Image("imagename3", "dimension info3", "other info3"));
@@ -21,21 +28,14 @@ public class Main {
         ds.add(new Audio("audioname1", "duration1", "other info1"));
         ds.add(new Audio("audioname2", "duration2", "other info2"));
         ds.add(new Audio("audioname3", "duration3", "other info3"));
-        ds.add(new Video("videoname1", "duration1", "other info1"));
-        ds.add(new Video("videoname2", "duration2", "other info2"));
-        ds.add(new Video("videoname3", "duration3", "other info3"));
-        ds.add(new Text("textname1", "other info1"));
-        ds.add(new Text("textname2", "other info2"));
-        ds.add(new Text("textname3", "other info3"));
 
 
-
-        p1.updatePlaylist((Playable) ds.getDatasetObjects().get(0));
+        p1.updatePlaylist((Playable) ds.getDatasetObjects().get(11));
+        p1.updatePlaylist((Playable) ds.getDatasetObjects().get(1));
         p1.updatePlaylist((Playable) ds.getDatasetObjects().get(2));
-        p1.updatePlaylist((Playable) ds.getDatasetObjects().get(4));
-        v1.updateViewList((NonPlayable) ds.getDatasetObjects().get(1));
         v1.updateViewList((NonPlayable) ds.getDatasetObjects().get(3));
-        v1.updateViewList((NonPlayable) ds.getDatasetObjects().get(5));
+        v1.updateViewList((NonPlayable) ds.getDatasetObjects().get(4));
+        v1.updateViewList((NonPlayable) ds.getDatasetObjects().get(6));
 
 
         Playable po = p1.currentlyPlaying();
